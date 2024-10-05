@@ -7,8 +7,8 @@ import joblib
 data = pd.read_csv('data/heart.csv')
 
 # Define features and target
-X = data.drop('target', axis=1)  # Replace 'target' with your actual target column name
-y = data['target']  # This is your target column
+X = data.drop('target', axis=1)  
+y = data['target'] 
 
 # Print the feature names to verify
 print("Feature names:", X.columns.tolist())
