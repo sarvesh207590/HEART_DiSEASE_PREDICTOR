@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        * {
+            color: black;
+        }
+
+        body {
+            background-image: url('static/image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(182, 215, 248, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+            margin-bottom: 100px;
+        }
+
+        h1 {
+            color: #000000;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+       
+        button:hover {
+            background-color: #d5814c;
+        }
+
+        
+
+        .form-group label {
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>HEART DISEASE PREDICTION </h1>
+        </center>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" name="age" placeholder="Enter your age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cp">Chest Pain Type</label>
+                <select class="form-control" name="cp" required>
+                    <option value="">Select Chest Pain Type</option>
+                    <option value="0">Typical angina</option>
+                    <option value="1">Atypical angina</option>
+                    <option value="2">Non-anginal pain</option>
+                    <option value="3">Asymptomatic</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure (in mmHg)</label>
+                <input type="number" class="form-control" name="trestbps" placeholder="Enter blood pressure" required>
+            </div>
+            <div class="form-group">
+                <label for="chol">Cholesterol (in mg/dl)</label>
+                <input type="number" class="form-control" name="chol" placeholder="Enter cholesterol level" required>
+            </div>
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar</label>
+                <select class="form-control" name="fbs" required>
+                    <option value="">Select Fasting Blood Sugar</option>
+                    <option value="0">Less than 120 mg/dl</option>
+                    <option value="1">Greater than 120 mg/dl</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="restecg">Resting Electrocardiographic Results</label>
+                <select class="form-control" name="restecg" required>
+                    <option value="">Select Result</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Having ST-T wave abnormality</option>
+                    <option value="2">Showing probable or definite left ventricular hypertrophy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="thalach">Maximum Heart Rate Achieved</label>
+                <input type="number" class="form-control" name="thalach" placeholder="Enter maximum heart rate"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="exang">Exercise Induced Angina</label>
+                <select class="form-control" name="exang" required>
+                    <option value="">Did you experience angina during exercise?</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="oldpeak">Old Peak (Range: 0 to 5)</label>
+                <input type="number" step="0.1" class="form-control" name="oldpeak" placeholder="Enter old peak"
+                    required min="0" max="5">
+            </div>
+            <div class="form-group">
+                <label for="slope">Slope of the Peak Exercise ST Segment</label>
+                <select class="form-control" name="slope" required>
+                    <option value="">Select Slope</option>
+                    <option value="0">Upsloping</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Downsloping</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ca">Number of Major Vessels (0-3)</label>
+                <input type="number" class="form-control" name="ca" placeholder="Enter number of vessels" required>
+            </div>
+            <div class="form-group">
+                <label for="thal">Thalassemia</label>
+                <select class="form-control" name="thal" required>
+                    <option value="">Select Thalassemia Type</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Fixed defect</option>
+                    <option value="2">Reversible defect</option>
+                </select>
+            </div>
+            <center><button type="submit" class="btn btn-primary button"
+                    style="background-color: #2148a4;font-size:20px; width: 250px;">Predict</button></center>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-weight: bold;
+      color: #343a40;
+      margin-bottom: 20px;
+    }
+    .healthy {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .unhealthy {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .btn-custom {
+      margin-top: 20px;
+    }
+    /* Custom image style */
+    img {
+      width:auto ;/* Small image size */
+      height: 500px;
+      border: 4px solid #343a40; /* Adds a border */
+      border-radius: 15px; /* Rounded edges */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+      display: block;
+      margin: 20px auto; /* Centers the image */
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container {{ 'healthy' if prediction == 'You are heart healthy!' else 'unhealthy' }}">
+    <h1>Prediction Result</h1>
+
+    <!-- Interface for healthy (No Heart Disease) -->
+    {% if prediction == 'You are heart healthy!' %}
+    <h3 class="text-success">Good News! You are healthy.</h3>
+    <p>Your heart shows no signs of disease. Keep maintaining a healthy lifestyle!</p>
+    <img src="static/good_heart.png" alt="Healthy Heart">
+
+    <!-- Interface for unhealthy (Heart Disease) -->
+    {% else %}
+    <h3 class="text-danger">Warning! Potential heart disease detected.</h3>
+    <p>It appears there may be some issues with your heart health. Please consult a doctor for further examination.</p>
+    <img src="static/help.png" alt="Unhealthy Heart">
+    {% endif %}
+
+    <center><a href="/" class="btn btn-primary btn-custom">Go Back</a><center>
+  </div>
+</body>
+</html>
+
+
