@@ -39,5 +39,5 @@ A machine learning-based web application that predicts the likelihood of heart d
 (https://github.com/sarvesh207590/HEART_DiSEASE_PREDICTOR/blob/main/images/557796a3-ed94-4211-895d-02f0027e4b32.jpg)
 ![alt text](https://github.com/sarvesh207590/HEART_DiSEASE_PREDICTOR/blob/main/images/557796a3-ed94-4211-895d-02f0027e4b32.jpg)
 
-
+![](https://github.com/sarvesh207590/HEART_DiSEASE_PREDICTOR/blob/main/images/67d9262a-1fbe-4e4f-a5ef-1c328a8f2672.jpg)
 
