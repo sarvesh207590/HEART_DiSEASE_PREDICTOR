@@ -36,6 +36,8 @@ A machine learning-based web application that predicts the likelihood of heart d
 - Evaluation metrics: Accuracy, Precision, Recall, F1-Score
 
 ---
+(https://github.com/sarvesh207590/HEART_DiSEASE_PREDICTOR/blob/main/images/557796a3-ed94-4211-895d-02f0027e4b32.jpg)
+![alt text](https://github.com/sarvesh207590/HEART_DiSEASE_PREDICTOR/blob/main/images/557796a3-ed94-4211-895d-02f0027e4b32.jpg)
 
 
 
